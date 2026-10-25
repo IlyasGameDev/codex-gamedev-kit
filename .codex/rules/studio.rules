@@ -1,0 +1,61 @@
+# Codex execution policy for common publishing commands.
+# These prefix rules apply to commands requested outside the sandbox. They are
+# not a filesystem deny list or a universal shell filter. Wrappers,
+# alternate argument orders, APIs, and other tools may not
+# match these prefixes. Keep sandbox/approval controls enabled.
+# No blanket deletion ban and no blanket test-command allowance are installed.
+
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "prompt",
+    justification = "Confirm the destination and changes before publishing Git history.",
+    match = ["git push origin main", "git push origin feature --force-with-lease"],
+    not_match = ["git status", "git diff", "git fetch origin"],
+)
+
+prefix_rule(
+    pattern = ["gh", "pr", ["create", "merge", "close", "reopen", "edit", "comment", "review"]],
+    decision = "prompt",
+    justification = "Confirm changes or messages sent to a shared pull request.",
+    match = ["gh pr create --draft", "gh pr merge 42", "gh pr comment 42 --body-file review.txt"],
+    not_match = ["gh pr view 42", "gh pr diff 42", "gh pr list"],
+)
+
+prefix_rule(
+    pattern = ["gh", "issue", ["create", "close", "reopen", "edit", "comment", "delete", "transfer", "pin", "unpin"]],
+    decision = "prompt",
+    justification = "Confirm changes or messages sent to a shared issue.",
+    match = ["gh issue create --title Bug", "gh issue comment 42 --body-file note.txt"],
+    not_match = ["gh issue view 42", "gh issue list"],
+)
+
+prefix_rule(
+    pattern = ["gh", "release", ["create", "edit", "delete", "upload", "delete-asset"]],
+    decision = "prompt",
+    justification = "Confirm the release version, audience, and artifacts before changing a published release.",
+    match = ["gh release create v1.0.0 game.zip", "gh release upload v1.0.0 game.zip"],
+    not_match = ["gh release view v1.0.0", "gh release list"],
+)
+
+prefix_rule(
+    pattern = ["butler", "push"],
+    decision = "prompt",
+    justification = "Confirm the itch.io project, channel, and build before upload.",
+    match = ["butler push build owner/game:windows"],
+    not_match = ["butler status owner/game"],
+)
+
+prefix_rule(
+    pattern = ["steamcmd"],
+    decision = "prompt",
+    justification = "Review Steam account, app, depot, and build actions before running SteamCMD outside the sandbox.",
+    match = ["steamcmd +run_app_build build.vdf +quit"],
+)
+
+prefix_rule(
+    pattern = ["npm", ["publish", "unpublish"]],
+    decision = "prompt",
+    justification = "Confirm the package, registry, and version before changing a published package.",
+    match = ["npm publish", "npm publish --access public"],
+    not_match = ["npm test", "npm run build"],
+)

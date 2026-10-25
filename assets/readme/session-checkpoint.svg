@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="title desc">
+  <title id="title">Pick up where you left off</title>
+  <desc id="desc">Save the task, changed files, checks, and next step in production/session-state/active.md. In a later chat, read the checkpoint, verify current files, and continue the task.</desc>
+  <rect x="1" y="1" width="1438" height="638" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <g font-family="Helvetica Neue, Arial, sans-serif">
+    <text x="64" y="66" font-size="21" font-weight="500" letter-spacing="2" fill="#2563eb">SESSION CHECKPOINTS</text>
+    <text x="64" y="130" font-size="53" font-weight="500" letter-spacing="-1.4" fill="#17191d">Pick up where you left off.</text>
+    <rect x="64" y="205" width="566" height="298" rx="20" fill="#f8f9fb" stroke="#e5e7eb"/>
+    <g transform="translate(99 237)" stroke="#2563eb" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0h21l11 11v29H0Zm21 0v11h11M8 23h16M8 31h12"/>
+    </g>
+    <text x="153" y="268" font-size="32" font-weight="500" fill="#17191d">active.md</text>
+    <path d="M100 295H594" stroke="#e5e7eb"/>
+    <g fill="#606772" font-size="29">
+      <text x="101" y="342">Task</text>
+      <text x="101" y="384">Changed files</text>
+      <text x="101" y="426">Checks</text>
+      <text x="101" y="468">Next step</text>
+    </g>
+    <text x="64" y="551" font-size="25" fill="#606772">production/session-state/active.md</text>
+    <g fill="none" stroke="#b7cdfa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M665 354H762m-11-8 11 8-11 8"/>
+    </g>
+    <text x="812" y="253" font-size="36" font-weight="500" fill="#17191d">Resume in a new chat</text>
+    <g fill="#eef4ff">
+      <circle cx="835" cy="330" r="23"/>
+      <circle cx="835" cy="414" r="23"/>
+      <circle cx="835" cy="498" r="23"/>
+    </g>
+    <g text-anchor="middle" font-size="22" fill="#2563eb" font-weight="500">
+      <text x="835" y="338">1</text>
+      <text x="835" y="422">2</text>
+      <text x="835" y="506">3</text>
+    </g>
+    <g font-size="31" fill="#606772">
+      <text x="888" y="341">Read the checkpoint</text>
+      <text x="888" y="425">Verify current files</text>
+      <text x="888" y="509">Continue the task</text>
+    </g>
+  </g>
+</svg>

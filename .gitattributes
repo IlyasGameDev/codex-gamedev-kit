@@ -1,0 +1,9 @@
+# Keep executable helpers and textual configuration portable.
+*.sh text eol=lf
+*.awk text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.tsv text eol=lf
+*.md text eol=lf

@@ -1,0 +1,14 @@
+# Codex Game Studios project settings; see .codex/docs/config-resolution.md.
+schema_version: 1
+framework:
+  version: 1.2.0
+  last_upgraded: 2026-10-25
+  runtime: codex
+  kit_version: 1.0.0
+modes:
+  automation: guided
+updates:
+  check: false
+# Rigor defaults to minimal. Set modes.rigor through $start or $settings.
+# Do not seed its six derived knobs; doing so pins them over the chosen rigor.
+# Per-developer overrides belong in gitignored project.local.yaml.

@@ -1,0 +1,19 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+# Project settings load after the user trusts this project in Codex.
+# Hook definitions require their own review in /hooks before they run.
+# Model and reasoning effort are deliberately inherited from the user's session.
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[agents]
+enabled = true
+# This is the number of spawned threads; the main thread is additional.
+max_concurrent_threads_per_session = 4
+
+[features]
+hooks = true
+multi_agent = true
+
+[tui]
+notifications = true

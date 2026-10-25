@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+  <title id="title">A clear path from task to game</title>
+  <desc id="desc">Choose a feature, fix, or review. Codex uses the kit's relevant skills, specialist roles, and project guidance to work on your game's code, assets, and tests.</desc>
+  <rect x="1" y="1" width="1438" height="558" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <g font-family="Helvetica Neue, Arial, sans-serif">
+    <text x="64" y="66" font-size="21" font-weight="500" letter-spacing="2" fill="#2563eb">HOW IT WORKS</text>
+    <text x="64" y="130" font-size="53" font-weight="500" letter-spacing="-1.4" fill="#17191d">A clear path from task to game.</text>
+    <g fill="none" stroke="#d2d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M370 284H590m-11-8 11 8-11 8"/>
+      <path d="M850 284H1070m-11-8 11 8-11 8"/>
+    </g>
+    <circle cx="240" cy="284" r="58" fill="#f5f6f8"/>
+    <circle cx="720" cy="284" r="58" fill="#eef4ff"/>
+    <circle cx="1200" cy="284" r="58" fill="#f5f6f8"/>
+    <g fill="none" stroke="#17191d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M216 263h48a5 5 0 0 1 5 5v29a5 5 0 0 1-5 5h-27l-17 12v-12h-4a5 5 0 0 1-5-5v-29a5 5 0 0 1 5-5Z"/>
+      <path d="M225 277h30m-30 12h20"/>
+      <path d="m705 266-18 18 18 18m30-36 18 18-18 18m-10-42-10 48" stroke="#2563eb"/>
+      <path d="M1170 271v-9h23l10 10h27v39h-60v-40Z"/>
+      <path d="M1170 282h60"/>
+    </g>
+    <text x="240" y="402" font-size="36" font-weight="500" text-anchor="middle" fill="#17191d">Your task</text>
+    <text x="240" y="450" font-size="29" text-anchor="middle" fill="#606772">A feature, a fix,</text>
+    <text x="240" y="489" font-size="29" text-anchor="middle" fill="#606772">or a review.</text>
+    <text x="720" y="402" font-size="36" font-weight="500" text-anchor="middle" fill="#17191d">The kit</text>
+    <text x="720" y="450" font-size="29" text-anchor="middle" fill="#606772">Relevant skills, roles,</text>
+    <text x="720" y="489" font-size="29" text-anchor="middle" fill="#606772">and project guidance.</text>
+    <text x="1200" y="402" font-size="36" font-weight="500" text-anchor="middle" fill="#17191d">Your game</text>
+    <text x="1200" y="450" font-size="29" text-anchor="middle" fill="#606772">Changes to your code,</text>
+    <text x="1200" y="489" font-size="29" text-anchor="middle" fill="#606772">assets, and tests.</text>
+  </g>
+</svg>

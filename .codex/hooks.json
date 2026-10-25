@@ -1,0 +1,88 @@
+{
+  "description": "Native Codex studio hooks. Review and trust using /hooks; see .codex/docs/hooks-reference/hook-input-schemas.md.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^apply_patch$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'studio_hook_root=\"$PWD\"; while [ ! -f \"$studio_hook_root/.codex/hooks/run.sh\" ]; do studio_hook_parent=\"$(dirname \"$studio_hook_root\")\"; if [ \"$studio_hook_parent\" = \"$studio_hook_root\" ]; then printf \"%s\\n\" \"Studio hook entry point was not found above the session directory.\" >&2; exit 2; fi; studio_hook_root=\"$studio_hook_parent\"; done; exec bash \"$studio_hook_root/.codex/hooks/run.sh\"'",
+            "timeout": 45
+          }
+        ]
+      }
+    ]
+  }
+}
